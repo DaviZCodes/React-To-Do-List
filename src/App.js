@@ -47,7 +47,7 @@ function App() {
         </div>
 
         <div class = "OurList"></div>
-        <ul>
+        <ol id = "ordered">
           {ourList.map(element => {
             return (
               <div class = "List">
@@ -56,7 +56,7 @@ function App() {
               </div>
             );
           })}
-        </ul>
+        </ol>
         <header> {display} </header>     
       </header>
     </div>

@@ -46,9 +46,17 @@
 }
 
 #Delete {
+  position: relative;
   height: 22px;
   font-size: 15px;
   align-items: center;
   text-align: center;
   color: rgb(255, 2, 28);
+  margin-left: 100px;
+}
+
+#ordered {
+  margin-bottom: 10%;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color:#e0d954;
 }
