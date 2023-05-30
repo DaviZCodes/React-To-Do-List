@@ -3,6 +3,7 @@
 }
 
 .App-header {
+  position: relative;
   background-color: #3e98d9;
   min-height: 100vh;
   display: flex;
@@ -21,6 +22,15 @@
   padding: 30px;
 }
 
+#title {
+  position: absolute;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color:#e0d954;
+  font-size: 50px;
+  left: 20px;
+  top: 20px;
+}
+
 #head {
   margin-bottom: 6px;
 }
@@ -33,4 +43,12 @@
 #button {
   margin-left: 15px;
   font-size:20px;
+}
+
+#Delete {
+  height: 22px;
+  font-size: 15px;
+  align-items: center;
+  text-align: center;
+  color: rgb(255, 2, 28);
 }
