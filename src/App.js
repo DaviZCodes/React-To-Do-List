@@ -26,7 +26,7 @@ function App() {
     setourList(updatedArray);
   }
 
-  let display;
+  let display; // This is not working. I wanted to add if length is equal to 0, then there is no more to-dos.
 
   if (ourList.length == 0){
     let display = "Congrats! You have no more to-dos!";
