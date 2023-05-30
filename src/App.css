@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #3e98d9;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,11 +15,17 @@
 
 .Add-To-Do {
   border-style: solid;
+  border-radius: 3px;
+  border-width: 3px;
   border-color: black;
+  padding: 30px;
+}
+
+#head {
+  margin-bottom: 6px;
 }
 
 #input {
-  margin-top: 20px;
   height: 22px;
   font-size: 20px;
 }
