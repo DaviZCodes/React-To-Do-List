@@ -41,7 +41,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header"> 
-        <header id = "title" onClick={() => clearAll()}> Davi's To-Dos </header>
+        <header id = "title" div title = "Click me to wipe all to-dos" onClick={() => clearAll()}> Davi's To-Dos </header>
         <header id = "head"> Write your to-dos here. </header>
 
         <div class = "Add-To-Do"> 
