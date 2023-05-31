@@ -1,13 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import { Component, useState } from 'react';
+import List from './List';
 
-function App() {
+function App(){
   //use State hook
   const [toDo, settoDo] = useState("");
   const [ourList, setourList] = useState([]);
 
   function addTodo(){
+
+    if (toDo == ""){
+      alert("You must write a to-do");
+      return
+    }
 
     // creating a unique id for the array to help filter
     const newItem = {
@@ -30,6 +36,13 @@ function App() {
     setourList([]);
   }
 
+  const handleKeypress = event => {
+    //it triggers by pressing the enter key
+  if (event.keyCode === 13) {
+    addTodo();
+  }
+};
+
   let display = ""; // This is not working. I wanted to add if length is equal to 0, then there is no more to-dos.
 
   /*if (ourList.length == 0){
@@ -46,25 +59,16 @@ function App() {
 
         <div class = "Add-To-Do"> 
           <input type = "text" id = "input" placeholder="Write your to-do..." 
-            value = {toDo} onChange = {item => settoDo(item.target.value)}></input>
+            value = {toDo} onChange = {item => settoDo(item.target.value)} onKeyDown = {handleKeypress}>
+            </input>
           <button id = "button" onClick = {addTodo}> Add To-Do </button>
         </div>
-
-        <div class = "OurList"></div>
-        <ol id = "ordered">
-          {ourList.map(element => {
-            return (
-              <div class = "List">
-                <li key = {element.id}> {element.desc} <button id = "Delete" 
-                onClick = {() => removeItem(element.id)}> Delete To-Do </button> </li> 
-              </div>
-            );
-          })}
-        </ol>
-        <header> {display} </header>     
+        <div class = "MainList">
+          <List parentList = {ourList} removeFunc = {removeItem}/>
+        </div>
       </header>
     </div>
   );
 }
-
 export default App;
+
