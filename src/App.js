@@ -73,7 +73,7 @@ function App(){
           <List parentList = {ourList} removeFunc = {removeItem}/>
         </div>
         <div class = "Congrats">
-          {/* {congrats} */}
+          {/* {congrats}  */}
         </div>
       </header>
     </div>
