@@ -7,7 +7,7 @@ function App(){
   //use State hook
   const [toDo, settoDo] = useState("");
   const [ourList, setourList] = useState([]);
-  const [congrats, setCongrats] = useState("Congrats! You have no more to-dos!")
+  const [congrats, setCongrats] = useState("Congrats! You have no more to-dos!");
 
   useEffect(() => {
     let storedArray = localStorage.getItem("ourL");
@@ -17,6 +17,10 @@ function App(){
       setourList(parsed_list);
     }
   }, [])
+
+  useEffect(() => {
+    sayCongrats();
+  })
 
 
   function addTodo(){
@@ -44,7 +48,7 @@ function App(){
     const updatedArray = ourList.filter(element => element.id !== given_id);
 
     setourList(updatedArray);
-    
+
     let stringed = JSON.stringify(ourList);
     localStorage.setItem("ourL", stringed);
   }
@@ -53,6 +57,15 @@ function App(){
     setourList([]);
     let stringed = JSON.stringify(ourList);
     localStorage.setItem("ourL", stringed);
+  }
+
+  function sayCongrats () {
+    if (ourList.length !== 0){
+      setCongrats("");
+    }
+    else {
+      setCongrats("Congrats! You have no more to-dos!");
+    }
   }
 
   const handleKeypress = event => {
@@ -78,7 +91,9 @@ function App(){
           <List parentList = {ourList} removeFunc = {removeItem}/>
         </div>
         <div class = "Congrats">
+          <p>
           {congrats}
+          </p>
         </div>
       </header>
     </div>
