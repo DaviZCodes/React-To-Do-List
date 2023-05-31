@@ -63,3 +63,10 @@
   color:#e0d954;
   text-align: left;
 }
+
+.Congrats {
+  margin-top: 20px;
+  font-size: 50px;
+  color-scheme: rgb(58, 58, 231);
+  font-weight: bold;
+}

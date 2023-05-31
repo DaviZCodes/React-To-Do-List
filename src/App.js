@@ -44,10 +44,15 @@ function App(){
     const updatedArray = ourList.filter(element => element.id !== given_id);
 
     setourList(updatedArray);
+    
+    let stringed = JSON.stringify(ourList);
+    localStorage.setItem("ourL", stringed);
   }
 
   function clearAll(){
     setourList([]);
+    let stringed = JSON.stringify(ourList);
+    localStorage.setItem("ourL", stringed);
   }
 
   const handleKeypress = event => {
@@ -73,7 +78,7 @@ function App(){
           <List parentList = {ourList} removeFunc = {removeItem}/>
         </div>
         <div class = "Congrats">
-          {/* {congrats}  */}
+          {congrats}
         </div>
       </header>
     </div>
