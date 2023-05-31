@@ -7,7 +7,7 @@ function App(){
   //use State hook
   const [toDo, settoDo] = useState("");
   const [ourList, setourList] = useState([]);
-  const [congrats, setCongrats] = useState("Congrats! You have no more to-dos!");
+  const [congrats, setCongrats] = useState();
 
   useEffect(() => {
     let storedArray = localStorage.getItem("ourL");
