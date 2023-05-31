@@ -1,12 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
-import { Component, useState } from 'react';
+import { useState, useEffect } from 'react';
 import List from './List';
 
 function App(){
+
   //use State hook
   const [toDo, settoDo] = useState("");
   const [ourList, setourList] = useState([]);
+  const [congrats, setCongrats] = useState("Congrats! You have no more to-dos!")
+
+  useEffect(() => {
+    let storedArray = localStorage.getItem("ourL");
+
+    if (storedArray){
+      let parsed_list = JSON.parse(storedArray);
+      setourList(parsed_list);
+    }
+  }, [])
+
 
   function addTodo(){
 
@@ -21,7 +32,10 @@ function App(){
       desc: toDo
     }
 
-     setourList(previousList => [...previousList, newItem]);
+    setourList(previousList => [...previousList, newItem]);
+
+    let stringed = JSON.stringify(ourList);
+    localStorage.setItem("ourL", stringed);
      settoDo("");
   }
 
@@ -38,18 +52,10 @@ function App(){
 
   const handleKeypress = event => {
     //it triggers by pressing the enter key
-  if (event.keyCode === 13) {
-    addTodo();
-  }
-};
-
-  let display = ""; // This is not working. I wanted to add if length is equal to 0, then there is no more to-dos.
-
-  /*if (ourList.length == 0){
-    let display = "Congrats! You have no more to-dos!";
-  } else {
-    display = ""
-  }*/
+    if (event.code === "Enter") {
+      addTodo();
+    }
+  };
 
   return (
     <div className="App">
@@ -65,6 +71,9 @@ function App(){
         </div>
         <div class = "MainList">
           <List parentList = {ourList} removeFunc = {removeItem}/>
+        </div>
+        <div class = "Congrats">
+          {/* {congrats} */}
         </div>
       </header>
     </div>
