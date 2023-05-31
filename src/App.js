@@ -26,18 +26,22 @@ function App() {
     setourList(updatedArray);
   }
 
-  let display; // This is not working. I wanted to add if length is equal to 0, then there is no more to-dos.
+  function clearAll(){
+    setourList([]);
+  }
+
+  /*let display = "Congrats! You have no more to-dos!"; // This is not working. I wanted to add if length is equal to 0, then there is no more to-dos.
 
   if (ourList.length == 0){
     let display = "Congrats! You have no more to-dos!";
   } else {
     display = ""
-  }
+  }*/
 
   return (
     <div className="App">
       <header className="App-header"> 
-        <header id = "title"> Davi's To-Dos </header>
+        <header id = "title" onClick={() => clearAll()}> Davi's To-Dos </header>
         <header id = "head"> Write your to-dos here. </header>
 
         <div class = "Add-To-Do"> 
