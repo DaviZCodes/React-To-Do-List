@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import List from './List';
+import axios from 'axios';
 
 function App(){
 
@@ -75,10 +76,28 @@ function App(){
     }
   };
 
+  /*function getQuote() {
+    const quot = document.querySelector("#quote");
+
+    axios.get("https://zenquotes.io/api/random")
+    .then(response => {
+      const data = response.data;
+      console.log(data);
+      quot.innerHTML = data[0].q;
+    })
+    .catch(error => {
+      console.error("API FAILED", error);
+    });
+  }*/
+
   return (
     <div className="App">
       <header className="App-header"> 
         <header id = "title" div title = "Click me to wipe all to-dos" onClick={clearAll}> Davi's To-Dos </header>
+        <div class = "motivational">
+          <header id = "motivation" div title = "Click me for a new quote" onClick={{/* getQuote */}}> Free Motivation </header>
+          <p id = "quote"> You can do it! </p>
+        </div>
         <header id = "head"> Write your to-dos here. </header>
 
         <div class = "Add-To-Do"> 
