@@ -2,6 +2,8 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import List from './List';
 
+//Typescript translation
+
 function App(){
 
   //use State hook
