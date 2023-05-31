@@ -52,13 +52,14 @@
   height: 22px;
   font-size: 15px;
   align-items: center;
-  text-align: center;
+  text-align: right;
   color: rgb(255, 2, 28);
-  margin-left: 100px;
+  margin-left: 80px;
 }
 
 #ordered {
   margin-bottom: 10%;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color:#e0d954;
+  text-align: left;
 }
