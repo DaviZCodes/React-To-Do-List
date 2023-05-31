@@ -30,9 +30,9 @@ function App() {
     setourList([]);
   }
 
-  /*let display = "Congrats! You have no more to-dos!"; // This is not working. I wanted to add if length is equal to 0, then there is no more to-dos.
+  let display = ""; // This is not working. I wanted to add if length is equal to 0, then there is no more to-dos.
 
-  if (ourList.length == 0){
+  /*if (ourList.length == 0){
     let display = "Congrats! You have no more to-dos!";
   } else {
     display = ""
