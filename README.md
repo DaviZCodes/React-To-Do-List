@@ -9,3 +9,4 @@ Key features:
 
 
 # Access the app at https://davizcodes.github.io/React-to-do-list/
+## Typescript branch availbale
