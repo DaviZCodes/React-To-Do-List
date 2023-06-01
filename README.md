@@ -6,7 +6,10 @@ Key features:
 - Add and remove to-dos
 - Clear all to-dos
 - Aesthetically Pleasing Design
+- Supports Enter Key to create a new to-do
+- LocalStorage to store list even after browser refresh
 
 
 # Access the app at https://davizcodes.github.io/React-to-do-list/
 ## Typescript branch availbale
+View typescript-app for the .tsx app
