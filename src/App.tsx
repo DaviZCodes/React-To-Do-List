@@ -98,10 +98,10 @@ function App(){
     <div className="App">
       <header className="App-header"> 
         <header id = "title" title = "Click me to wipe all to-dos" onClick={clearAll}> Davi's To-Dos </header>
-        <div className = "motivational">
+        {/*<div className = "motivational">
           <header id = "motivation" title = "Click me for a new quote"> Free Motivation </header>
           <p id = "quote"> You can do it! </p>
-        </div>
+        </div>*/}
         <header id = "head"> Write your to-dos here. </header>
 
         <div className = "Add-To-Do"> 
