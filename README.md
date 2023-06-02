@@ -9,6 +9,7 @@ Key features:
 - Supports Enter Key to create a new to-do
 - LocalStorage to store list even after browser refresh
 - Motivational quotes acquired by API through Axion
+- Typescript for type checking
 
 
 # Access the app at https://davizcodes.github.io/React-to-do-list/
