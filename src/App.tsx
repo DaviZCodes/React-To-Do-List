@@ -1,14 +1,20 @@
 import './App.css';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import List from './List';
 import axios from 'axios';
+
+interface toDoElement {
+  id: number;
+  desc: string;
+}
 
 function App(){
 
   //use State hook
   const [toDo, settoDo] = useState("");
-  const [ourList, setourList] = useState([]);
-  const [congrats, setCongrats] = useState();
+  const [ourList, setourList] = useState<toDoElement[]>([]);
+  const [congrats, setCongrats] = useState("");
+  const [quote, setQuote] = useState("You can do it!")
 
   useEffect(() => {
     let storedArray = localStorage.getItem("ourL");
@@ -44,7 +50,7 @@ function App(){
      settoDo("");
   }
 
-  function removeItem(given_id){
+  function removeItem(given_id : number){
 
     const updatedArray = ourList.filter(element => element.id !== given_id);
 
@@ -69,47 +75,44 @@ function App(){
     }
   }
 
-  const handleKeypress = event => {
+  const handleKeypress = (event : React.KeyboardEvent<HTMLInputElement>) => {
     //it triggers by pressing the enter key
     if (event.code === "Enter") {
       addTodo();
     }
   };
 
-  /*function getQuote() {
-    const quot = document.querySelector("#quote");
-
+  function getQuote() {
     axios.get("https://zenquotes.io/api/random")
     .then(response => {
       const data = response.data;
-      console.log(data);
-      quot.innerHTML = data[0].q;
+      setQuote(data[0].q);
     })
     .catch(error => {
       console.error("API FAILED", error);
+      setQuote("Quote could not be acquired by the API.")
     });
-  }*/
-
+  }
   return (
     <div className="App">
       <header className="App-header"> 
-        <header id = "title" div title = "Click me to wipe all to-dos" onClick={clearAll}> Davi's To-Dos </header>
-        <div class = "motivational">
-          <header id = "motivation" div title = "Click me for a new quote" onClick={{/* getQuote */}}> Free Motivation </header>
-          <p id = "quote"> You can do it! </p>
+        <header id = "title" title = "Click me to wipe all to-dos" onClick={clearAll}> Davi's To-Dos </header>
+        <div className = "motivational">
+          <header id = "motivation" title = "Click me for a new quote" onClick = {getQuote}> Free Motivation </header>
+          <p id = "quote" title = "Click me for a new quote" onClick = {getQuote}> {quote} </p>
         </div>
         <header id = "head"> Write your to-dos here. </header>
 
-        <div class = "Add-To-Do"> 
+        <div className = "Add-To-Do"> 
           <input type = "text" id = "input" placeholder="Write your to-do..." 
             value = {toDo} onChange = {item => settoDo(item.target.value)} onKeyDown = {handleKeypress}>
             </input>
           <button id = "button" onClick = {addTodo}> Add To-Do </button>
         </div>
-        <div class = "MainList">
+        <div className = "MainList">
           <List parentList = {ourList} removeFunc = {removeItem}/>
         </div>
-        <div class = "Congrats">
+        <div className = "Congrats">
           <p>
           {congrats}
           </p>
