@@ -7,7 +7,7 @@ Key features:
 - Clear all to-dos
 - Aesthetically Pleasing Design
 - Supports Enter Key to create a new to-do
-- LocalStorage to store list even after browser refresh
+- LocalStorage to cache list even after browser refresh
 - Motivational quotes acquired by API through Axion
 - Typescript for type checking
 
