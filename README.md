@@ -15,3 +15,5 @@ Key features:
 # Access the app at https://davizcodes.github.io/React-to-do-list/
 ## Typescript branch availbale
 View typescript-app for the .tsx app
+
+# NOTE: If the quote could not be acquired. Please check your browser's CORS settings.
