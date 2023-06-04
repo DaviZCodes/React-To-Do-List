@@ -16,4 +16,4 @@ Key features:
 ## Typescript branch availbale
 View typescript-app for the .tsx app
 
-# NOTE: If the quote could not be acquired. Please check your browser's CORS settings.
+# NOTE: If the quote could not be acquired, please check your browser's CORS settings.
