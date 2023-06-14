@@ -34,7 +34,7 @@ function App(){
 
   function addTodo(){
 
-    if (toDo == ""){
+    if (toDo === ""){
       alert("You must write a to-do");
       return
     }
@@ -73,7 +73,7 @@ function App(){
       setCongrats("");
     }
     else {
-      setCongrats("Congrats! You have no more to-dos!");
+      setCongrats("Congrats! You have no to-dos!");
     }
   }
 
@@ -103,7 +103,7 @@ function App(){
           <header id = "motivation" title = "Click me for a new quote" onClick = {getQuote}> Free Motivation </header>
           <p id = "quote" title = "Click me for a new quote" onClick = {getQuote}> {quote} </p>
         </div>
-        <header id = "head"> Write your to-dos here. </header>
+        <header id = "head"> Write your to-dos here! </header>
 
         <div className = "Add-To-Do"> 
           <input type = "text" id = "input" placeholder="Write your to-do..." 
