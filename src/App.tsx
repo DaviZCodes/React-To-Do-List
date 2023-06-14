@@ -106,7 +106,7 @@ function App(){
         <header id = "head"> Write your to-dos here! </header>
 
         <div className = "Add-To-Do"> 
-          <input type = "text" id = "input" placeholder="Write your to-do..." 
+          <input type = "text" id = "input" placeholder="Write your to-do..." className="smaller" 
             value = {toDo} onChange = {item => settoDo(item.target.value)} onKeyDown = {handleKeypress}>
             </input>
           <button id = "button" onClick = {addTodo}> Add To-Do </button>
