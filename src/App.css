@@ -183,6 +183,10 @@
     margin-bottom: 50px;
     text-align: center;
   }
+
+  @media (max-width: 450px) {
+    display: none;
+  }
 }
 
 #ordered {
