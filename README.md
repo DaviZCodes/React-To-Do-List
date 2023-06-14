@@ -8,7 +8,7 @@ Key features:
 - Aesthetically Pleasing Design
 - Supports Enter Key to create a new to-do
 - LocalStorage to cache list even after browser refresh
-- Motivational quotes acquired by API through Axion
+- Motivational quotes acquired by API through Axion (credits to ZenQuotes API)
 - Typescript for type checking
 
 
