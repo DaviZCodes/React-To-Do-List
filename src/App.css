@@ -43,6 +43,8 @@
   border-color: black;
   padding: 60px;
 
+  animation: rainbow 5s infinite;
+
   @media (max-width: 450px) {
     max-width: 200px;
   }
@@ -50,6 +52,17 @@
   @media (max-width: 350px) {
     max-width: 100px;
   }
+}
+
+@keyframes rainbow {
+  0%   { border-color: red; }
+  14%  { border-color: orange; }
+  28%  { border-color: yellow; }
+  42%  { border-color: green; }
+  57%  { border-color: blue; }
+  71%  { border-color: indigo; }
+  85%  { border-color: violet; }
+  100% { border-color: rgb(48, 226, 245); }
 }
 
 #title {
@@ -61,11 +74,17 @@
   top: 20px;
   cursor: pointer;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: font-size 0.5s;
 
   @media (max-width: 350px) {
     font-size: 30px;
   }
 }
+
+#title:hover{
+  font-size: 2em;
+}
+
 
 #head {
   margin-bottom: 6px;
@@ -84,6 +103,13 @@
     height: 12px;
     max-width: 130px;
   }
+
+  @media (max-width: 300px) {
+    font-size: 12px;
+    padding: 2px;
+    height: 12px;
+    max-width: 100px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -101,11 +127,16 @@
   cursor: pointer;
   padding: 5px;
   border-radius: 3px;
-
+  transition: transform 0.3s;
+  
   @media (max-width: 450px) {
       font-size: 16px;
       padding: 3px;
     }
+}
+
+#button:hover{
+  transform: scale(1.05);
 }
 
 #Delete {
@@ -167,4 +198,8 @@
   font-size: 50px;
   color-scheme: rgb(58, 58, 231);
   font-weight: bold;
+
+  @media (max-width: 500px) {
+    font-size: 30px;
+  }
 }
