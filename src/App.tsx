@@ -12,6 +12,12 @@ interface toDoElement {
 
 function App(){
 
+  //change document/tab title
+  useEffect(() =>
+  {
+    document.title = "Davi's To-Dos"
+  }, [])
+
   //use State hook
   const [toDo, settoDo] = useState("");
   const [ourList, setourList] = useState<toDoElement[]>([]);
