@@ -141,6 +141,8 @@
   cursor: pointer;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  word-wrap: break-word;
+  max-width: 400px;
 
   @media (max-width: 680px) {
     position: static;
