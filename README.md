@@ -5,7 +5,7 @@ Simple To-Do List made with React.js.
 Key features:
 - Add and remove to-dos
 - Clear all to-dos
-- Aesthetically Pleasing Design
+- Aesthetically Pleasing (RGB) Design
 - Supports Enter Key to create a new to-do
 - LocalStorage to cache list even after browser refresh
 - Motivational quotes acquired by API through Axion (credits to ZenQuotes API)
