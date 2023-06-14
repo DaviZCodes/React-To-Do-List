@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import List from './List';
+import List from "./List";
+import Date from "./Date";
 import axios from 'axios';
 
 //To-do
@@ -105,10 +106,14 @@ function App(){
     <div className="App">
       <header className="App-header"> 
         <header id = "title" title = "Click me to wipe all to-dos" onClick={clearAll}> Davi's To-Dos </header>
+
+        <div className="current-time"><Date/></div>
+
         <div className = "motivational">
           <header id = "motivation" title = "Click me for a new quote" onClick = {getQuote}> Free Motivation </header>
           <p id = "quote" title = "Click me for a new quote" onClick = {getQuote}> {quote} </p>
         </div>
+
         <header id = "head"> Write your to-dos here! </header>
 
         <div className = "Add-To-Do"> 
@@ -117,9 +122,11 @@ function App(){
             </input>
           <button id = "button" onClick = {addTodo}> Add To-Do </button>
         </div>
+
         <div className = "MainList">
           <List parentList = {ourList} removeFunc = {removeItem}/>
         </div>
+
         <div className = "Congrats">
           <p>
           {congrats}

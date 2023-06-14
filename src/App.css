@@ -2,6 +2,16 @@
   text-align: center;
 }
 
+.current-time {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: fixed;
+  bottom: 0;
+  right: 25px;
+  text-shadow: 0.2px 0.3px 4px rgba(0, 0, 0, 0.2);
+}
+
 .List {
   display: flex;
   flex-direction: column;
@@ -9,6 +19,7 @@
   text-align: center;
   white-space: pre-wrap;
   word-break: break-word;
+  padding: 5px;
 }
 
 .App-header {
@@ -25,6 +36,7 @@
 
 #head {
   font-weight: bold;
+  text-shadow: 0.2px 0.3px 4px rgba(0, 0, 0, 0.2);
 }
 
 .desc {
@@ -96,6 +108,7 @@
   border-radius: 3px;
   padding: 6px;
   background-color: hsl(0, 0%, 91%);
+  transition: transform 0.3s ease-in;
 
   @media (max-width: 350px) {
     font-size: 12px;
@@ -110,6 +123,10 @@
     height: 12px;
     max-width: 105px;
   }
+}
+
+#input:hover {
+ transform: scale(1.03);
 }
 
 @media (max-width: 450px) {
@@ -146,10 +163,15 @@
   align-items: center;
   text-align: right;
   color: rgb(255, 2, 28);
-  margin-left: 80px;
+  margin-left: 50px;
   border-width: 0.2px;
   cursor: pointer;
   border-radius: 2px;
+  transition: transform 0.3s;
+}
+
+#Delete:hover {
+  transform: scale(1.05);
 }
 
 #Edit {
