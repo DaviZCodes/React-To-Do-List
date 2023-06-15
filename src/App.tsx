@@ -64,7 +64,7 @@ function App(){
 
   function removeItem(given_id : number){
 
-    setourList(previousList => {;
+    setourList(() => {;
     const updatedArray = ourList.filter(element => element.id !== given_id);
 
     let stringed = JSON.stringify(updatedArray);

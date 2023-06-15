@@ -10,6 +10,7 @@
   bottom: 0;
   right: 25px;
   text-shadow: 0.2px 0.3px 4px rgba(0, 0, 0, 0.2);
+  z-index: 99999;
 }
 
 .List {
