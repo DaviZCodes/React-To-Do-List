@@ -52,27 +52,31 @@ function App(){
       desc: toDo
     }
 
-    setourList(previousList => [...previousList, newItem]);
+    setourList(previousList => {
+      const updatedList = [...previousList, newItem];
 
-    let stringed = JSON.stringify(ourList);
-    localStorage.setItem("ourL", stringed);
+      let stringed = JSON.stringify(updatedList);
+      localStorage.setItem("ourL", stringed);
+      return updatedList;
+    });
      settoDo("");
   }
 
   function removeItem(given_id : number){
 
+    setourList(previousList => {;
     const updatedArray = ourList.filter(element => element.id !== given_id);
 
-    setourList(updatedArray);
-
-    let stringed = JSON.stringify(ourList);
+    let stringed = JSON.stringify(updatedArray);
     localStorage.setItem("ourL", stringed);
+
+    return updatedArray;
+    });
   }
 
   function clearAll(){
     setourList([]);
-    let stringed = JSON.stringify(ourList);
-    localStorage.setItem("ourL", stringed);
+    localStorage.setItem("ourL", "[]");
   }
 
   function sayCongrats () {
