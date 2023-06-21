@@ -7,14 +7,14 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 
-app.get("/quotes", (req, res) => {
+app.get("/quotes", (req: any, res: { json: (arg0: { quote: any; }) => void; status: (arg0: number) => { (): any; new(): any; json: { (arg0: { error: string; }): void; new(): any; }; }; }) => {
   axios.get("https://zenquotes.io/api/random")
-    .then(response => {
+    .then((response: { data: any; }) => {
       const data = response.data;
       res.json({ quote: data[0].q });
     })
 
-    .catch(error => {
+    .catch((error: any) => {
       console.error("API request failed", error);
       res.status(500).json({ error: "Quote could not be acquired from the API."});
     });
