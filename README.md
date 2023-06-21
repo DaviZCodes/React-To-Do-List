@@ -17,7 +17,7 @@ Key features:
 
 ## To get the quotes from the backend
 1. Clone the repository
-2. cd backend
-3. npm install
-4. nodemon server.js (and make sure that the port 3001 is not occupied)
+2. $ cd backend
+3. $ npm install
+4. $ nodemon server.js (and make sure that the port 3001 is not occupied)
 5. Quotes will be acquired after click
