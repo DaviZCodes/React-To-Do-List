@@ -1,8 +1,8 @@
-import './App.css';
-import React, { useState, useEffect } from 'react';
+import "./App.css";
+import React, { useState, useEffect } from "react";
 import List from "./List";
 import Date from "./Date";
-import axios from 'axios';
+import axios from "axios";
 
 //To-do
 
@@ -103,8 +103,8 @@ function App(){
       })
 
       .catch(error => {
-        console.error('API request failed', error);
-        setQuote('Quote could not be acquired from the API.');
+        console.error("API request failed", error);
+        setQuote("Quote could not be acquired from the API.");
       });
   }
 
