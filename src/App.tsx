@@ -96,16 +96,18 @@ function App(){
   };
 
   function getQuote() {
-    axios.get("https://zenquotes.io/api/random")
-    .then(response => {
-      const data = response.data;
-      setQuote(data[0].q);
-    })
-    .catch(error => {
-      console.error("API FAILED", error);
-      setQuote("Quote could not be acquired by the API.")
-    });
+    axios.get("http://localhost:3001/quotes")
+      .then(response => {
+        const quote = response.data.quote;
+        setQuote(quote);
+      })
+
+      .catch(error => {
+        console.error('API request failed', error);
+        setQuote('Quote could not be acquired from the API.');
+      });
   }
+
   return (
     <div className="App">
       <header className="App-header"> 
