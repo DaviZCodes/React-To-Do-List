@@ -1,20 +1,20 @@
 //backend for API calls to resolve CORS issue
 
-const express = require("express");
-const axios = require("axios");
-const cors = require("cors");
+import express from "express";
+import axios from "axios";
+import cors from "cors";
 
 const app = express();
 app.use(cors());
 
-app.get("/quotes", (req, res) => {
+app.get("/quotes", (req:any, res:any) => {
   axios.get("https://zenquotes.io/api/random")
-    .then((response) => {
+    .then((response:any) => {
       const data = response.data;
       res.json({ quote: data[0].q });
     })
 
-    .catch((error) => {
+    .catch((error:any) => {
       console.error("API could not fetch", error);
       res.status(500).json({ error: "Quote could not be acquired from the API."});
     });
