@@ -1,6 +1,7 @@
 {
   "name": "to-do-list",
   "version": "0.1.0",
+  "license": "MIT",
   "homepage": "http://DaviZCodes.github.io/React-to-do-list",
   "private": true,
   "dependencies": {
