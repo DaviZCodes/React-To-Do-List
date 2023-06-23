@@ -7,11 +7,8 @@ Key features:
 - Clear all to-dos
 - Live local time to keep track of time
 - Aesthetically Pleasing (well, for some it's too bright)
-- Supports Enter Key to create a new to-do
 - LocalStorage to cache list even after browser refresh
 - Motivational quotes acquired by API through Axion (credits to ZenQuotes API)
-- Typescript for type checking
-
 
 # Access the app at https://davizcodes.github.io/React-to-do-list/
 
