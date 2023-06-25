@@ -6,7 +6,7 @@ Key features:
 - Add and remove to-dos
 - Clear all to-dos
 - Live local time to keep track of time
-- Aesthetically Pleasing (well, for some it's too bright)
+- Aesthetically Pleasing (well, for some)
 - LocalStorage to cache list even after browser refresh
 - Motivational quotes acquired by API through Axion (credits to ZenQuotes API)
 
