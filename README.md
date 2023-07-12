@@ -10,11 +10,6 @@ Key features:
 - LocalStorage to cache list even after browser refresh
 - Motivational quotes acquired by API through Axion (credits to ZenQuotes API)
 
-# Access the app at https://davizcodes.github.io/React-to-do-list/
+# Access the app at https://react-to-do-list-frontend.vercel.app
 
-## To get the motivational quotes from the backend
-1. Clone the repository
-2. $ cd backend
-3. $ npm install
-4. $ nodemon server.ts (and make sure that the port 3001 is not occupied)
-5. Quotes will be acquired after click
+## Frontend and backend on Vercel
