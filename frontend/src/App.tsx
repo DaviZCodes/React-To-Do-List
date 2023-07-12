@@ -96,7 +96,7 @@ function App(){
   };
 
   function getQuote() {
-    axios.get("http://localhost:3001/quotes")
+    axios.get("https://react-to-do-list-backend-nine.vercel.app/quotes")
       .then(response => {
         const quote = response.data.quote;
         setQuote(quote);
