@@ -1,13 +1,13 @@
 //backend for API calls to resolve CORS issue
 
-import express from "express";
+import express, {Request, Response} from "express";
 import axios from "axios";
 import cors from "cors";
 
 const app = express();
 app.use(cors());
 
-app.get("/quotes", (req:any, res:any) => {
+app.get("/quotes", (req:Request, res:Response) => {
   axios.get("https://zenquotes.io/api/random")
     .then((response:any) => {
       const data = response.data;
@@ -21,3 +21,6 @@ app.get("/quotes", (req:any, res:any) => {
 });
 
 app.listen(3001);
+
+// Export the Express API
+module.exports = app;

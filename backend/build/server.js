@@ -21,3 +21,5 @@ app.get("/quotes", (req, res) => {
     });
 });
 app.listen(3001);
+// Export the Express API
+module.exports = app;
