@@ -13,4 +13,4 @@ Key features:
 # Access the app at https://react-to-do-list-frontend.vercel.app
 
 ## Frontend and backend on Vercel
-> Frontend on CRA and Backend on NodeJS
+> Frontend on CRA and Backend on NodeJS and Express
