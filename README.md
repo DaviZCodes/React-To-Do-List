@@ -7,7 +7,7 @@ Key features:
 - Aesthetically Pleasing (well, for some)
 - Add and remove to-dos
 - Clear all to-dos
-- Live local time to keep track of time
+- Live local time 
 - LocalStorage to cache list even after browser refresh
 - Motivational quotes acquired by API (credits to ZenQuotes API - https://zenquotes.io/api/random)
 
