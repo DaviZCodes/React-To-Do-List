@@ -13,4 +13,7 @@ Key features:
 
 # Access the app at https://react-to-do-list-frontend.vercel.app
 
-## Frontend and backend on Vercel
+## Performance 
+[Performance](https://i.imgur.com/BS02841.png)
+https://pagespeed.web.dev/analysis/https-react-to-do-list-frontend-vercel-app/0ra2vyrcu9?form_factor=desktop
+
